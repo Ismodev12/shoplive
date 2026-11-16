@@ -55,10 +55,9 @@
         </div>
 
         <div class="checkout" id="checkout">
-          <form class="checkout__form" id="checkout-form" name="commande" method="POST" action="/index.html" data-netlify="true" netlify-honeypot="champ-robot" novalidate>
-            <!-- Netlify Forms : identifiant du formulaire + anti-spam -->
+          <form class="checkout__form" id="checkout-form" name="commande" method="POST" action="/index.html" data-netlify="true" novalidate>
+            <!-- Netlify Forms : identifiant du formulaire -->
             <input type="hidden" name="form-name" value="commande">
-            <p class="sr-only" aria-hidden="true"><label>Ne pas remplir <input name="champ-robot" tabindex="-1" autocomplete="off"></label></p>
             <!-- Valeurs calculées (renseignées juste avant l'envoi) -->
             <input type="hidden" name="numero_commande" value="">
             <input type="hidden" name="date_commande" value="">
@@ -311,9 +310,8 @@
           <h1 id="contact-title">Nous contacter</h1>
           <p>Une question sur une référence, une livraison ou un paiement ? Écrivez-nous.</p>
         </div>
-        <form class="card" id="contact-form" name="contact" method="POST" action="/index.html" data-netlify="true" netlify-honeypot="champ-robot" novalidate>
+        <form class="card" id="contact-form" name="contact" method="POST" action="/index.html" data-netlify="true" novalidate>
           <input type="hidden" name="form-name" value="contact">
-          <p class="sr-only" aria-hidden="true"><label>Ne pas remplir <input name="champ-robot" tabindex="-1" autocomplete="off"></label></p>
           <div class="grid-2">
             <div class="field"><div class="control">
               <input id="cName" name="nom" type="text" autocomplete="name" required maxlength="80" placeholder=" ">

@@ -48,8 +48,8 @@ Voir l'en-tête de `js/services/payment-service.js`. Le Payment Element se monte
 
 ## Netlify Forms
 
-Les formulaires **commande** et **contact** sont déclarés en HTML (`data-netlify="true"`, champ caché `form-name`,
-anti-spam `netlify-honeypot="champ-robot"`). Netlify les détecte au déploiement : les envois apparaissent dans
+Les formulaires **commande** et **contact** sont déclarés en HTML (`data-netlify="true"` et champ caché `form-name`).
+Netlify les détecte au déploiement : les envois apparaissent dans
 *Site → Forms*.
 
 - Champs envoyés (commande) : `montant`, `reference_commande`, `article_commande`, `pseudo_tiktok`, `prenom`, `nom`,

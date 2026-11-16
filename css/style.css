@@ -594,5 +594,3 @@ body.is-locked { overflow: hidden; }
 .today__empty { padding: 18px; border-radius: var(--r-md); background: var(--c-surface); border: 1px solid var(--c-line); color: var(--c-text-3); font-size: 14px; text-align: center; }
 .section-label { margin: 0 0 12px 4px; font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--c-text-2); }
 
-/* Champ anti-spam Netlify (honeypot) : invisible pour les visiteurs, rempli seulement par les robots */
-.hp-field { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
