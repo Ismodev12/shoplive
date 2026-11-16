@@ -34,27 +34,11 @@ SL.mockData = Object.freeze({
   /** Modes de livraison. `prices` par zone ; `null` = indisponible dans la zone. */
   shippingMethods: [
     {
-      id: 'home',
-      name: 'Livraison à domicile',
-      description: '2 à 4 jours ouvrés, remise contre signature',
-      icon: 'truck',
-      prices: { FR: 590, EU: 990 },
-      freeFrom: 15000
-    },
-    {
       id: 'relay',
       name: 'Point relais',
       description: '3 à 5 jours ouvrés, retrait dans un point relais proche de chez vous',
       icon: 'store',
-      prices: { FR: 390, EU: 690 },
-      freeFrom: 15000
-    },
-    {
-      id: 'express',
-      name: 'Express 24 h',
-      description: 'Commande avant 13 h, livrée le lendemain',
-      icon: 'package',
-      prices: { FR: 1290, EU: null },
+      prices: { FR: 500, EU: 500 },
       freeFrom: null
     }
   ],

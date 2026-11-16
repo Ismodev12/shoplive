@@ -11,7 +11,7 @@ SL.checkoutView = (() => {
   const state = {
     countries: [],
     methods: [],
-    shippingId: 'home',
+    shippingId: 'relay',
     touched: new Set(),
     submitting: false,
     lastSubtotal: null
@@ -280,7 +280,7 @@ SL.checkoutView = (() => {
     form.reset();
     $('#country').value = 'FR';
     state.touched.clear();
-    state.shippingId = 'home';
+    state.shippingId = 'relay';
     state.lastSubtotal = null;
     Object.keys(FIELD_RULES).forEach((name) => setFieldError(field(name), ''));
     $$('.is-valid', form).forEach((el) => el.classList.remove('is-valid'));
