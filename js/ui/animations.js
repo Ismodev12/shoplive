@@ -55,7 +55,7 @@ SL.anim = (() => {
     setStep('Vérification du paiement…', 70);
     await Promise.all([wait(1000 * speed), task || Promise.resolve()]);
     overlay.classList.add('is-success');
-    setStep('Paiement accepté', 100);
+    setStep('⏳ En cours de validation', 100);
     await wait(1100 * speed);
   }
 

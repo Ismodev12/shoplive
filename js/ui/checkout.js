@@ -18,7 +18,6 @@ SL.checkoutView = (() => {
   };
 
   let form, onConfirmed;
-  const PENDING_KEY = 'shoplive.pendingConfirmation';
   /** Champs par id (les attributs name sont ceux envoyés à Netlify). */
   const field = (id) => document.getElementById(id);
 
@@ -236,13 +235,19 @@ SL.checkoutView = (() => {
         shippingName: method.name
       });
 
-      // Envoi Netlify Forms : soumission HTML native du formulaire (hors file://).
+      // Envoi Netlify Forms en arrière-plan (hors file://), SANS recharger la page :
+      // la soumission part en AJAX, puis on enchaîne en douceur sur la page de remerciement
+      // (plus de form.submit() qui coupait l'animation par un rechargement complet).
       // Les champs de carte n'ont pas d'attribut name : ils ne sont jamais envoyés.
       if (location.protocol !== 'file:') {
         fillHiddenFields(order, method);
-        try { sessionStorage.setItem(PENDING_KEY, order.orderNumber); } catch { /* stockage indisponible */ }
-        form.submit(); // POST vers l'action du formulaire, la page de remerciement s'affiche au retour
-        return;
+        try {
+          await fetch(form.getAttribute('action') || '/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+          });
+        } catch { /* hors ligne ou serveur local : la commande reste accessible via le suivi */ }
       }
 
       resetForm();

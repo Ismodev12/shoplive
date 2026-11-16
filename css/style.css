@@ -81,7 +81,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 .site-header { position: sticky; top: 0; z-index: 40; background: rgba(255, 255, 255, .88); backdrop-filter: saturate(160%) blur(12px); -webkit-backdrop-filter: saturate(160%) blur(12px); border-bottom: 1px solid var(--c-line); }
 .site-header__inner { height: var(--header-h); display: flex; align-items: center; gap: 16px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--c-text); text-decoration: none; }
-.brand__logo { height: 40px; width: auto; }
+.brand__logo { height: 44px; width: auto; }
 .live-badge {
   display: inline-flex; align-items: center; gap: 7px; padding: 5px 10px 5px 9px; border-radius: 999px;
   background: var(--c-live-soft); color: var(--c-live); font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
@@ -387,7 +387,7 @@ input::placeholder { color: #8A918C; }
 .site-footer { background: #1E2225; color: rgba(255, 255, 255, .78); font-size: 14px; }
 .site-footer__inner { display: grid; grid-template-columns: auto 1fr auto; gap: 20px 40px; align-items: center; padding-top: 32px; padding-bottom: 32px; }
 .brand--light { color: #fff; }
-.brand--light .brand__logo { height: 30px; }
+.brand--light .brand__logo { height: 40px; }
 .site-footer__brand p { margin-top: 8px; font-size: 13px; }
 .site-footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; }
 .site-footer__links a { color: #fff; text-decoration: none; opacity: .85; }
@@ -416,7 +416,7 @@ input::placeholder { color: #8A918C; }
   .live-badge { padding: 4px 8px; font-size: 10.5px; }
   .header-link span { display: none; }
   .header-link { padding: 9px; }
-  .brand__logo { height: 28px; }
+  .brand__logo { height: 36px; }
   .view { padding-top: 28px; }
   .card { padding: 20px 16px 22px; border-radius: var(--r-lg); }
   .card__title { font-size: 17px; }
@@ -479,7 +479,7 @@ input::placeholder { color: #8A918C; }
 .splash.is-done { animation: splash-out .35s var(--ease) forwards; }
 @keyframes splash-out { to { opacity: 0; visibility: hidden; } }
 .splash__inner { display: flex; flex-direction: column; align-items: center; gap: 28px; width: min(380px, 78vw); }
-.splash__logo { position: relative; width: 100%; animation: splash-rise .7s var(--ease) both; }
+.splash__logo { position: relative; width: min(150px, 40vw); animation: splash-rise .7s var(--ease) both; }
 .splash__logo img { width: 100%; height: auto; clip-path: inset(0 100% 0 0); animation: splash-reveal 1.05s cubic-bezier(.65, 0, .35, 1) .25s forwards; }
 @keyframes splash-rise { from { opacity: 0; transform: translateY(12px) scale(.96); } }
 @keyframes splash-reveal { to { clip-path: inset(0 0 0 0); } }
@@ -487,8 +487,8 @@ input::placeholder { color: #8A918C; }
   position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .85) 50%, transparent 70%) no-repeat;
   background-size: 60% 100%; background-position: -120% 0;
-  -webkit-mask: url("../assets/brand/shoplive-logo.png") center / 100% 100% no-repeat;
-          mask: url("../assets/brand/shoplive-logo.png") center / 100% 100% no-repeat;
+  -webkit-mask: url("../assets/brand/shoplive-icon.png") center / 100% 100% no-repeat;
+          mask: url("../assets/brand/shoplive-icon.png") center / 100% 100% no-repeat;
   animation: splash-shine .9s ease-in-out 1.4s forwards;
 }
 @keyframes splash-shine { to { background-position: 220% 0; } }

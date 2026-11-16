@@ -25,13 +25,13 @@ SL.pages = (() => {
 
     el.innerHTML = `
       <div class="thanks">
-        <div class="thanks__badge">${icon('check')}</div>
+        <div class="thanks__badge">${icon('hourglass')}</div>
         <h1 id="confirm-title">Merci pour votre commande&nbsp;!</h1>
-        <p class="thanks__lead">Votre paiement a été confirmé. Une confirmation a été envoyée à votre adresse e-mail.</p>
+        <p class="thanks__lead">Votre commande a bien été envoyée. ⏳ Veuillez patienter quelques minutes et valider l'opération dans l'application de votre banque.</p>
 
         <dl class="thanks__details">
           <div><dt>Référence de commande</dt><dd><strong>${format.escape(reference)}</strong></dd></div>
-          <div><dt>N° de suivi</dt><dd><button type="button" class="thanks__copy" id="copy-order" title="Copier le numéro"><span id="order-number">${format.escape(order.orderNumber)}</span>${icon('copy')}</button></dd></div>
+          <div><dt>N° de suivi</dt><dd><button type="button" class="thanks__copy" id="copy-order" title="Copier le numéro"><span id="order-number">${format.escape(order.orderNumber)}</span></button></dd></div>
           <div><dt>Date</dt><dd>${dateText}</dd></div>
           <div><dt>Transporteur</dt><dd>${format.escape(order.shipping.name)}</dd></div>
           <div class="thanks__total"><dt>Total payé</dt><dd><strong>${format.price(order.totals.total)}</strong></dd></div>
